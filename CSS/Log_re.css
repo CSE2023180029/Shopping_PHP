@@ -1,0 +1,77 @@
+:root{
+   --blue: #2980b9;
+   --red: tomato;
+   --orange: orange;
+   --black: #333;
+   --white: #fff;
+   --bg-color: #eee;
+   --box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+   --border: 1rem solid #999;
+   --dark-bg: rgba(0, 0, 0, .5);
+}
+*{
+   font-family: 'Jaldi', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+body{
+   background-color: var(--dark-bg);
+}
+.container{
+   width: 100%;
+   /* max-width: 1200px; */
+   height: 100vh;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #2980b9;
+}
+.container form{
+   background-color: var(--bg-color);
+   width: 250px;
+   height: auto;
+   padding: 20px;
+   border-radius: 3px;
+   box-shadow: var(--box-shadow);
+}
+.container h1{
+   margin-bottom: 20px;
+   text-align: center;
+   font-size: 1rem;
+   color: var(--blue);
+}
+.container form input{
+   color: var(--blue);
+   width: 100%;
+   padding: 6px 15px;
+   margin: 10px 0;
+   border: none;
+}
+.container form input[type=submit]{
+   background-color: var(--blue);
+   color: var(--white);
+   margin-top: 20px;
+}
+.container form input[type=submit]:hover{
+   background-color: var(--black);
+   color: var(--white);
+}
+.switch{
+   width: 100%;
+   height: auto;
+}
+.switch p{
+   font-size: 10px;
+   float: right;
+   margin-top: 10px;
+}
+.container  .message {
+   color: var(--blue);
+   font-size: 10px;
+   text-align: center;
+}

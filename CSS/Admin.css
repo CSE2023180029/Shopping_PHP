@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi&family=Raleway:wght@200;300;400;500&display=swap');
+:root{
+   --blue: #2980b9;
+   --red: tomato;
+   --orange: orange;
+   --black: #333;
+   --white: #fff;
+   --bg-color: #eee;
+   --box-shadow: 0.5rem 1rem rgba(0,0,0.1);
+   --border: 1rem solid #999;
+   --dark-bg: rgba(0, 0, 0, .5);
+}
+*{
+   font-family: 'Jaldi', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+.container{
+   max-width: 1200px;
+   margin: 0 auto;
+}
+section{
+   padding: 2rem;
+}
+.btn,
+.option-btn,
+.delete-btn{
+   display: block;
+   width: 100%;
+   text-align: center;
+   background-color: var(--blue);
+   color: var(--white);
+   font-size: 1.7rem;
+   padding: 1.2rem 3rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   border: none;
+   margin-top: 1rem;
+}
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+   background-color: var(--black);
+}
+.option-btn i,
+.delete-btn i{
+   padding-right: .5rem;
+}
+.option-btn{
+   background-color: var(--orange);
+}
+.delete-btn{
+   margin-top: 0;
+   background-color: var(--red);
+}
+.message{
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 10000;
+   border-radius: .5rem;
+   background-color: var(--white);
+   padding: 1.5rem 2rem;
+   margin: 0 auto;
+   max-width: 1200px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+}
+.message span{
+   font-size: 2rem;
+   color: var(--black);
+}
+.message i{
+   font-size: 2.5rem;
+   color: var(--black);
+   cursor: pointer;
+}
+.message i:hover{
+   color: var(--orange);
+}
+.header{
+   background-color: var(--blue);
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
+.header .flex{
+   display: flex;
+   align-items: center;
+   padding:1.5rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+.header .flex .logo{
+   margin-right: auto;
+   font-size: 2.5rem;
+   color: var(--white);
+}
+.header .flex .navbar a{
+   margin-left: 2rem;
+   font-size: 2rem;
+   color: var(--white);
+}
+.header .flex .navbar a:hover{
+   color: var(--orange);
+}
+.header .flex .cart{
+   margin-left: 2rem;
+   font-size: 2rem;
+   color: var(--white);
+}
+.header .flex .cart:hover{
+   color: var(--orange);
+}
+.header .flex .cart span{
+   padding: .2rem .5rem;
+   border-radius: .5rem;
+   background-color: var(--white);
+   color: var(--orange);
+   font-size: 2rem;
+}
+#menu-btn{
+   margin-left: 2rem;
+   font-size: 3rem;
+   cursor: pointer;
+   color: var(--white);
+   display: none;
+}
+.add-product-form{
+   max-width: 50rem;
+   background: var(--bg-color);
+   border-radius: .5rem;
+   padding: 2rem;
+   margin: 0 auto;
+   margin-top: 2rem;
+}
+.add-product-form h3{
+   font-size: 2.5rem;
+   margin-bottom: 1rem;
+   color: var(--black);
+   text-transform: uppercase;
+   text-align: center;
+}
+.add-product-form .box{
+   border: none;
+   text-transform: none;
+   padding: 1.2rem 1.4rem;
+   font-size: 1.7rem;
+   color: var(--black);
+   border-radius: .5rem;
+   background-color: var(--white);
+   margin: 1rem 0;
+   width: 100%;
+}
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px){
+   html{
+      font-size: 55%;
+   }
+}
+
+@media (max-width:768px){
+   #menu-btn{
+      display: inline-block;
+      transition: .2s linear;
+   }
+   #menu-btn.fa-times{
+      transform: rotate(180deg);
+   }
+   .header .flex .navbar{
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background-color: var(--blue);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+   }
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   }
+   .header .flex .navbar a{
+      margin: 2rem;
+      display: block;
+      text-align: center;
+      font-size: 2.5rem;
+   }
+}
+@media (max-width:450px){
+   html{
+      font-size: 50%;
+   }
+   .heading{
+      font-size: 1rem;
+   }
+      
+   .product .box-container{
+      grid-template-columns: 1fr
+   }
+}
